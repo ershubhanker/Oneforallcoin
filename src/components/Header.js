@@ -30,8 +30,9 @@ const Header = () => {
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <Link to={"/"}>
-            <a class="navbar-brand page-scroll">
-              <img class="logo_light" src="assets/images/logo.png" alt="logo" />
+            <a  class="navbar-brand page-scroll">
+              {/* <img style={{width:"90px"}}  class="logo_light" src="assets/images/OFA_2.png" alt="logo" /> */}
+              <h1  style={{color:"white"}} >Oneforall</h1>
               <img
                 class="logo_dark"
                 src="assets/images/logo_dark.png"

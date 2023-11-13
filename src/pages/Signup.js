@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Signup = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scrolls to the top of the page
+      }, []);
+    
   return (
     <>
     <section style={{marginTop:"50px" , backgroundColor:"#0f3e97"}} class="pt-0">

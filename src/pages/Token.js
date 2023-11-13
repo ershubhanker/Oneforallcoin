@@ -1,4 +1,7 @@
 import React from 'react'
+import Metamask from '../components/Metamask'
+import Ethcal from '../components/Ethcal'
+import Tokenstabs from '../components/Tokenstabs'
 
 const Token = () => {
   return (
@@ -57,7 +60,7 @@ const Token = () => {
                 <div class="tk_countdown text-center countdown_shape">
                     <div class="tk_counter_inner">
                         <div class="tk_countdown_time" data-time="2024/09/06 00:00:00"></div>
-                        <a href="#" class="btn btn-default">Buy Token Now <i class="ion-ios-arrow-thin-right"></i></a>
+                      <Ethcal/>
                     </div>
                 </div>
             </div>

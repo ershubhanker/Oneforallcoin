@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { login } from "../redux/authreducer/action";
@@ -29,6 +29,10 @@ const Login = () => {
     setEmail("");
     setPassword("");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
 
   return isLoading ? (
     <Loading />

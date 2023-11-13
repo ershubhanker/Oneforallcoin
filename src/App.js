@@ -4,18 +4,13 @@ import MainRoutes from "./components/MainRoutes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-
-
-
 function App() {
   return (
     <div className="App">
+      <Header />
+      <MainRoutes />
 
-  
-    <Header/>
-    <MainRoutes/>
-     <Footer/>
-
+      <Footer />
     </div>
   );
 }

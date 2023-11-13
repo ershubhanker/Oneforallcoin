@@ -1064,6 +1064,7 @@ header a:hover,.navbar-nav li a.active {
 .logo_dark,
 .v_light .logo_light {
 	display: none;
+	
 }
 .v_light .logo_dark {
 	display: block;

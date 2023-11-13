@@ -6,11 +6,13 @@ import Signup from '../pages/Signup'
 import PrivateRoute from './PrivateRoute'
 
 const MainRoutes = () => {
+  
   return (
     <Routes>
-        <Route path='/' element={<Homepage/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/signup' element={<Signup/>}/> 
+      
+        <Route path='/' element={<Homepage/>} scrollToTop />
+        <Route path='/login' element={<Login/>} scrollToTop  />
+        <Route path='/signup' element={<Signup/>} scrollToTop /> 
     </Routes>
   )
 }
