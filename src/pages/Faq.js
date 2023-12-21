@@ -1,10 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Team = () => {
+const Faq = () => {
   return (
-    <section id="team" class="team_wrap" data-parallax="scroll" data-image-src="assets/images/team_bg.png">
-        <div class="container">
-            <div class="row text-center">
+    <section
+      id="team"
+      class="team_wrap"
+      data-parallax="scroll"
+      data-image-src="assets/images/team_bg.png"
+    >
+      <div class="container">
+        {/* <div class="row text-center">
                 <div class="col-lg-8 col-md-12 offset-lg-2">
                     <div class="title_dark">
                         <span>Our Core Team</span>
@@ -306,62 +311,345 @@ const Team = () => {
                         </div>
                     </div>
                 </div>
+            </div> */}
+        <div id="faq">
+          <div class="divider large_divider"></div>
+          <div class="row text-center">
+            <div class="col-lg-8 col-md-12 offset-lg-2">
+              <div class="title_dark">
+                <span>FAQs</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>
+                  Frequently asked questions (FAQ) or Questions and Answers
+                  (Q&A), are listed questions and answers, all supposed to be
+                  commonly asked in some context
+                </p>
+              </div>
             </div>
-            <div id="faq">
-                <div class="divider large_divider"></div>
-                <div class="row text-center">
-                    <div class="col-lg-8 col-md-12 offset-lg-2">
-                        <div class="title_dark">
-                            <span>FAQs</span>
-                            <h2>Frequently Asked Questions</h2>
-                            <p>Frequently asked questions (FAQ) or Questions and Answers (Q&A), are listed questions and answers, all supposed to be commonly asked in some context</p>
-                        </div>
+          </div>
+          <div class="row small_space">
+            <div class="col-lg-8 col-md-12 offset-lg-2">
+              <div id="accordion" class="faq_content">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        data-toggle="collapse"
+                        class="gradient_box"
+                        href="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        What is cryptocurrency?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    class="collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      {" "}
+                      Cryptocurrency is a digital or virtual form of currency
+                      that uses cryptography for security and operates
+                      independently of a central bank. It uses decentralized
+                      control, making it immune to manipulation or interference
+                      by a single authority.
                     </div>
+                  </div>
                 </div>
-                <div class="row small_space">
-                    <div class="col-lg-8 col-md-12 offset-lg-2">
-                        <div id="accordion" class="faq_content">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h6 class="mb-0"> <a data-toggle="collapse" class="gradient_box" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What is cryptocurrency?</a> </h6>
-                                </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                    <div class="card-body gradient_box"> Cryptocurrency is a form of payment that can be exchanged online for goods and services. Many companies have issued their own currencies, often called tokens, and these can be traded specifically for the good or service that the company provides. Think of them as you would arcade tokens or casino chips. You'll need to exchange real currency for the cryptocurrency to access the good or service. </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h6 class="mb-0"> <a class="collapsed gradient_box" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Which cryptocurrency is best to buy today?</a> </h6>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                    <div class="card-body gradient_box"> The best cryptocurrency to buy is one we are willing to hold onto even if it goes down. For example, I believe in Steem enough that I am willing to hold it even if it goes down 99% and would start buying more of it if the price dropped. </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h6 class="mb-0"> <a class="collapsed gradient_box" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How about day trading crypto?</a> </h6>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                    <div class="card-body gradient_box"> While profits are possible trading cryptocurrencies, so are losses. My first year involved me spending hundreds of hours trading Bitcoin with a result of losing over $5,000 with nothing to show for it. Simply trading digital currencies is very similar to gambling because no one really knows what is going to happen next although anyone can guess! While I was lucky to do nothing expect lose money when I started, the worst thing that can happen is to get lucky right away and get a big ego about what an amazing cryptocurrency trader we are. </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingFour">
-                                    <h6 class="mb-0"> <a class="collapsed gradient_box" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">When to sell a cryptocurrency?</a> </h6>
-                                </div>
-                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                                    <div class="card-body gradient_box"> Before Steem I was all in an another altcoin and really excited about it. When I first bought the price was low and made payments to me every week just for holding it. As I tried to participate in the community over the next several months, I was consistently met with a mix of excitement and hostility. When I began talking openly about this, the negative emotions won over in the community and in me. Originally I had invested and been happy to hold no matter what the price which quickly went up after I bought it. </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        How do I buy cryptocurrency?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      {" "}
+                      You can buy cryptocurrency through cryptocurrency
+                      exchanges, which are online platforms that facilitate the
+                      buying, selling, and trading of cryptocurrencies. You can
+                      usually purchase cryptocurrencies using fiat currency or
+                      other digital assets. We are using MetaMask. You will need
+                      to create an account.
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <div class="shape shap1"></div>
-        <div class="shape shap2"></div>
-    </section>
-  )
-}
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        How do I store my cryptocurrency?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    class="collapse"
+                    aria-labelledby="headingThree"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      {" "}
+                      Cryptocurrencies are stored in digital wallets, which can
+                      be software-based (hot wallets) or hardware devices (cold
+                      wallets). Hot wallets are connected to the internet, while
+                      cold wallets are offline for enhanced security.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingFour">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        What is blockchain?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseFour"
+                    class="collapse"
+                    aria-labelledby="headingFour"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      {" "}
+                      Blockchain is the underlying technology behind
+                      cryptocurrencies. It is a distributed ledger that records
+                      all transactions across a network of computers. Each block
+                      in the chain contains a list of transactions, and once
+                      added, it cannot be altered.
+                    </div>
+                  </div>
+                </div>
 
-export default Team
+                <div class="card">
+                  <div class="card-header" id="headingFive">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        Are cryptocurrencies safe to invest in?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseFive"
+                    class="collapse"
+                    aria-labelledby="headingFive"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      Cryptocurrencies, like any investment, come with risks.
+                      Their value can be volatile, and they are also susceptible
+                      to hacking and fraud. It's essential to conduct thorough
+                      research and understand the risks before investing in
+                      cryptocurrencies.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingSix">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        What is the difference between Bitcoin and altcoins?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseSix"
+                    class="collapse"
+                    aria-labelledby="headingSix"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      Bitcoin is the first and most well-known cryptocurrency,
+                      often referred to as digital gold. Altcoins, or
+                      alternative coins, refer to any cryptocurrency other than
+                      Bitcoin. Examples of altcoins include Ethereum, Ripple,
+                      Litecoin, and many others.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingSeven">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseSeven"
+                        aria-expanded="false"
+                        aria-controls="collapseSeven"
+                      >
+                        How can I research and analyze cryptocurrencies?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseSeven"
+                    class="collapse"
+                    aria-labelledby="headingSeven"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      Various websites and platforms provide cryptocurrency
+                      market data, analysis, and news. You can use these
+                      resources to study historical price charts, trading
+                      volumes, market capitalization, and other relevant
+                      information.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingEight">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseEight"
+                        aria-expanded="false"
+                        aria-controls="collapseEight"
+                      >
+                        Can I use cryptocurrencies for online purchases?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseEight"
+                    class="collapse"
+                    aria-labelledby="headingEight"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      Many online retailers and businesses accept
+                      cryptocurrencies as a form of payment. Additionally, some
+                      platforms offer crypto debit cards that allow users to
+                      spend their cryptocurrency holdings at traditional
+                      merchants.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingNine">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseNine"
+                        aria-expanded="false"
+                        aria-controls="collapseNine"
+                      >
+                        What are the tax implications of owning cryptocurrency?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseNine"
+                    class="collapse"
+                    aria-labelledby="headingNine"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      Cryptocurrency tax regulations vary by country. In many
+                      jurisdictions, buying, selling, and trading
+                      cryptocurrencies may have tax implications. It's important
+                      to consult with a tax professional to understand the tax
+                      obligations related to cryptocurrency transactions.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingTen">
+                    <h6 class="mb-0">
+                      {" "}
+                      <a
+                        class="collapsed gradient_box"
+                        data-toggle="collapse"
+                        href="#collapseTen"
+                        aria-expanded="false"
+                        aria-controls="collapseTen"
+                      >
+                        How can I stay updated on cryptocurrency news and
+                        developments?
+                      </a>{" "}
+                    </h6>
+                  </div>
+                  <div
+                    id="collapseTen"
+                    class="collapse"
+                    aria-labelledby="headingTen"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body gradient_box">
+                      You can stay informed by following reputable
+                      cryptocurrency news websites, subscribing to industry
+                      newsletters, joining cryptocurrency communities on social
+                      media platforms, and following influential figures in the
+                      cryptocurrency space.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shape shap1"></div>
+      <div class="shape shap2"></div>
+    </section>
+  );
+};
+
+export default Faq;

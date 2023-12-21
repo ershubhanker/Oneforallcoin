@@ -4,7 +4,7 @@ import First from "../pages/First";
 import Howitworks from "../pages/Howitworks";
 import About from "../pages/About";
 import Token from "../pages/Token";
-import Team from "../pages/Team";
+import Faq from "../pages/Faq";
 import Whitepaper from "../pages/Whitepaper";
 import Clients from "../pages/Clients";
 import Ethcal from "./Ethcal";
@@ -20,10 +20,10 @@ const Homepage = () => {
       <Howitworks />
       <About />
       <Token />
-      <Team />
+      <Faq />
       <Whitepaper />
       <Clients />
-      <Ethcal/>
+
       <a href="#" class="scrollup btn-default" style={{ display: "none" }}>
         <i class="ion-ios-arrow-up"></i>
       </a>

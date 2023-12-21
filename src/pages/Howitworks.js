@@ -9,26 +9,26 @@ const Howitworks = () => {
             <div class="col-lg-5 col-md-12 col-sm-12">
                 <div class="title_dark">
                     <h2>How it Works</h2>
-                    <p>Bitcoin Mining is a peer-to-peer computer process used to secure and verify bitcoin transactions&mdash;ayments from one user to another on a decentralized network.Mining involves adding bitcoin transaction data to Bitcoin's global public ledger of past transactions.</p>
+                    <p>Create a account and connect with the website. As soon you connect we onboard you to purchase our tokens. You can buy our tokens from ethereum as well as with USDT also.</p>
                 </div>
-                <a href="#mobileapp" class="btn btn-default page-scroll">Download App <i class="ion-ios-arrow-thin-right"></i></a> </div>
+                 </div>
             <div class="col-lg-7 col-md-12 col-sm-12">
                 <div class="work_box">
                     <div class="box_inner"> <i class="ion-person-add"></i>
                         <h4>Create Account</h4>
-                        <p>Bitcoin Core, however, is a full node, meaning it helps verify and transmit other Bitcoin transactions across the network and stores copy of the entire blockchain.</p>
+                        <p>Create your account in your wallet and connect with the website. As soon you connect your wallet you are eligble to purchase tokens from our website.</p>
                     </div>
                 </div>
                 <div class="work_box">
                     <div class="box_inner"> <i class="ion-ios-locked"></i>
                         <h4>Safe & Secure</h4>
-                        <p>We take careful measures to ensure that your bitcoin is as safe as possible. Offline storage provides an important security measure against theft or loss. </p>
+                        <p>We take careful measures to ensure that your token is as safe as possible.</p>
                     </div>
                 </div>
                 <div class="work_box">
                     <div class="box_inner"> <i class="ion-android-cart"></i>
-                        <h4>Buy & Sell</h4>
-                        <p>Blockchain works with exchange partners all around the world to make buying bitcoin in your wallet both a seamless and secure experience.</p>
+                        <h4>Buy</h4>
+                        <p>You can buy our tokens from our website and store it in your wallet.</p>
                     </div>
                 </div>
             </div>

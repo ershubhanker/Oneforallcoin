@@ -8,10 +8,10 @@ const First = () => {
             <div class="col-lg-6 col-md-12 col-sm-12 order-lg-first text_md_center">
                 <div class="banner_text">
                     <h1><span>Oneforall</span> Landing Page</h1>
-                    <h3>Start Bitcoin mining today!</h3>
-                    <p>The highest paying Bitcoin mining pool and cloud mining provider on the market. Start mining Bitcoin today!</p>
+                    <h3>Start purchasing tokens from today!</h3>
+                    <p>The newly launched token. Start purchasing the tokens by just clicking on button below!</p>
                     <div class="banner_btn">
-                        <a href="#whitepaper" class="btn btn-default page-scroll nav-link">Whitepapter <i class="ion-ios-arrow-thin-right"></i></a>
+                        <a href="#whitepaper" class="btn btn-default page-scroll nav-link">Whitepaper <i class="ion-ios-arrow-thin-right"></i></a>
                         <a href="#token" class="btn btn-border">Buy Token Now! <i class="ion-ios-arrow-thin-right"></i></a> </div>
                 </div>
             </div>

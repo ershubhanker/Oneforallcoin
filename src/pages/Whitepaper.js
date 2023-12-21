@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Blockwhitepaper from "../Whitepaper/OFA_Blockchain_Whitepaper.pdf"
 const Whitepaper = () => {
   return (
     <section id="whitepaper" class="section_gradiant">
@@ -11,7 +11,7 @@ const Whitepaper = () => {
                     <p>A white paper is an authoritative report or guide that informs readers concisely about a complex issue and presents the issuing body's philosophy on the matter. It is meant to help readers understand an issue, solve a problem, or make a decision.</p>
                     <p>Marketers create whitepapers to educate their audience about a particular issue, or explain and promote a particular methodology.</p>
                 </div>
-                <a class="btn btn-default" href="#"><span class="ion-android-download"></span>Download Now <i class="ion-ios-arrow-thin-right"></i></a> </div>
+                <a href={Blockwhitepaper} download={"OFA_Blockchain_Whitepaper.pdf"} class="btn btn-default"><span class="ion-android-download"></span>Download Now <i class="ion-ios-arrow-thin-right"></i></a> </div>
             <div class="col-lg-4 offset-lg-1 col-md-5">
                 <div class="res_md_mt_30">
                     <img alt="whitepaper" src="assets/images/whitepaper.png"/>

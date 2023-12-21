@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { login } from "../redux/authreducer/action";
+import { login, resetPassword } from "../redux/authreducer/action";
 import Loading from "../components/Loading";
+import { Alert, AlertTitle } from "@mui/material";
+import "../CSS/animate.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [alertComponent, setAlertComponent] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
-  const { isLoading } = useSelector((store) => store.authReducer);
+  const { isLoading, resetEmailSent, resetEmailError } = useSelector(
+    (store) => store.authReducer
+  );
   console.log(location);
+  // const msg = useSelector((store) => store.authReducer.msg);
+  // // console.log(msg);
 
   const dispatch = useDispatch();
 
@@ -21,13 +28,55 @@ const Login = () => {
       password,
     };
 
-    dispatch(login(userData)).then(() => {
-      navigate(location.state, { replace: true });
-      navigate("/");
-    });
+    dispatch(login(userData))
+      .then(() => {
+        const alertComponent = (
+          <Alert
+            variant="filled"
+            severity="success"
+            onClose={() => setAlertComponent(null)}
+          >
+            <AlertTitle>Login Successfull!!</AlertTitle>
+            <strong>Redirecting to you on homepage.</strong>
+          </Alert>
+        );
+        setAlertComponent(alertComponent);
 
-    setEmail("");
-    setPassword("");
+        // Navigate after a delay, or when the user closes the alert
+        setTimeout(() => {
+          navigate(location.state, { replace: true });
+          navigate("/");
+        }, 1000); 
+      })
+      .catch((err) => {
+        const alertComponent = (
+          <Alert
+            variant="filled"
+            severity="error"
+            onClose={() => setAlertComponent(null)}
+          >
+            <AlertTitle>Error</AlertTitle>
+            {err.response.data.msg} <strong>check it out once!</strong>
+          </Alert>
+        );
+        setAlertComponent(alertComponent);
+
+        setTimeout(() => {
+          setAlertComponent(null);
+        }, 3000);
+      })
+      .finally(() => {
+        setEmail("");
+        setPassword("");
+      });
+  };
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevVisible) => !prevVisible);
+  };
+
+  const handleForgotPasswordClick = () => {
+    dispatch(resetPassword(email));
   };
 
   useEffect(() => {
@@ -68,7 +117,7 @@ const Login = () => {
                   </div>
                   <div class="form-group">
                     <input
-                      type="password"
+                      type={passwordVisible ? "text" : "password"}
                       id="password-field"
                       name="password"
                       placeholder="Password"
@@ -78,8 +127,11 @@ const Login = () => {
                       required
                     />
                     <span
+                      onClick={togglePasswordVisibility}
                       data-toggle="#password-field"
-                      class="ion-eye toggle-password"
+                      class={`ion-eye toggle-password ${
+                        passwordVisible ? "visible" : ""
+                      }`}
                     ></span>
                   </div>
                   <div class="form-group">
@@ -94,13 +146,21 @@ const Login = () => {
                         Remember me
                       </label>
                     </div>
+
                     <a
                       style={{ color: "white" }}
-                      href="lost-password-blue.html"
+                      onClick={handleForgotPasswordClick}
+                      disabled={isLoading}
                       class="forgot_pass"
                     >
                       Forgot Password?
                     </a>
+                    {resetEmailSent && (
+                      <div>Password reset email sent successfully!</div>
+                    )}
+                    {resetEmailError && (
+                      <div style={{ color: "red" }}>{resetEmailError}</div>
+                    )}
                   </div>
                   <div class="form-group text-center">
                     <button type="submit" class="btn btn-default">
@@ -123,6 +183,10 @@ const Login = () => {
           </div>
         </div>
       </div>
+
+      {alertComponent && (
+        <div className="alert-container">{alertComponent}</div>
+      )}
     </section>
   );
 };
