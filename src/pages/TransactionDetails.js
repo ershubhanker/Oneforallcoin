@@ -28,6 +28,7 @@ const TransactionDetails = () => {
 
   const [copiedItems, setCopiedItems] = useState([]);
 
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -115,7 +116,7 @@ const TransactionDetails = () => {
               {buyTokensDetails.data.docs.map((filteredToken, index) => (
                 <tr key={filteredToken._id}>
                   <td style={{ fontSize: "12px", color: "black" , textAlign : "center"}}>
-                    {index + 1} {/* Serial number starting from 1 */}
+                    {((currentPage - 1) * buyTokensDetails.data.limit) + index + 1} {/* Serial number starting from 1 */}
                   </td>
                   <td style={{ fontSize: "12px", color: "black"  , textAlign : "center"}}>
                     {filteredToken.userAddress}

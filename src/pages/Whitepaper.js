@@ -61,14 +61,19 @@ const Whitepaper = () => {
                             <i class="ion-ios-location"></i>
                             <div class="contact_detail">
                                 <span>Address</span>
-                                <p>22 International Division Via G.B. Pirelli</p>
+                                <p>Phillipines Office ,
+                                    Brgy 26 purok 1 Gingoog City
+                                    <br/>
+                                    Grahian lipunan
+                                    Misamis Oriental
+                                </p>
                             </div>
                         </li>
                         <li class="input-group-prepend align-items-center">
                             <i class="ion-android-call"></i>
                             <div class="contact_detail">
                                 <span>Phone</span>
-                                <p>+23 0123 4567</p>
+                                <p>+19294908904</p>
                             </div>
                         </li>
                         <li class="input-group-prepend align-items-center">

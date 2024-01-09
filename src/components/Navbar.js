@@ -78,17 +78,21 @@ const Navbar = () => {
             }}
           >
             <div>
-              <Link to={"/"}>
-                <a class="navbar-brand page-scroll">
-                  {/* <img style={{width:"90px"}}  class="logo_light" src="assets/images/OFA_2.png" alt="logo" /> */}
-                  <h1 style={{ color: "white" }}>Oneforall</h1>
-                  <img
-                    class="logo_dark"
-                    src="assets/images/logo_dark.png"
-                    alt="logo"
-                  />
-                </a>
-              </Link>
+              <a href="/" class="navbar-brand page-scroll">
+                <img
+                  style={{ width: "90px" }}
+                  class="logo_light"
+                  src="assets/images/OFA_1.png"
+                  alt="logo"
+                />
+                {/* <h1 style={{ color: "white" }}>Oneforall</h1> */}
+                <span>OFA</span>
+                <img
+                  class="logo_dark"
+                  src="assets/images/logo_dark.png"
+                  alt="logo"
+                />
+              </a>
             </div>
             <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
               <a href="#how_it_work">How it Work</a>
@@ -156,17 +160,22 @@ const Navbar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Link to={"/"}>
-              <a style={{ display: "flex", alignItems: "center" }}>
-                {/* <img style={{width:"90px"}}  class="logo_light" src="assets/images/OFA_2.png" alt="logo" /> */}
-                <h1 style={{ color: "white", margin: 0 }}>Oneforall</h1>
-                <img
-                  class="logo_dark"
-                  src="assets/images/logo_dark.png"
-                  alt="logo"
-                />
-              </a>
-            </Link>
+
+            <a href="/" style={{ display: "flex", alignItems: "center" }}>
+              <img
+                style={{ width: "90px" }}
+                class="logo_light"
+                src="assets/images/OFA_2.png"
+                alt="logo"
+              />
+              {/* <h1 style={{ color: "white", margin: 0 }}>Oneforall</h1> */}
+              <img
+                class="logo_dark"
+                src="assets/images/logo_dark.png"
+                alt="logo"
+              />
+            </a>
+
             {auth ? (
               <>
                 {" "}

@@ -8,7 +8,7 @@ const Footer = () => {
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                     <div class="footer_logo">
-                        <a href="index.html"> <img alt="logo" src="assets/images/logo.png"/> </a>
+                        <a href="/"> <img style={{width:"200px"}} alt="logo" src="assets/images/OFA_1.png"/> </a>
                     </div>
                     <div class="newsletter_form large_space">
                         <h4 class="footer_title">Subscribe Our Newsletter</h4>
