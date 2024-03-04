@@ -1,17 +1,20 @@
 import React from 'react'
 import Blockwhitepaper from "../Whitepaper/OFA_Blockchain_Whitepaper.pdf"
+import { useTranslation } from 'react-i18next';
 const Whitepaper = () => {
+    const { t } = useTranslation();
   return (
+    
     <section id="whitepaper" class="section_gradiant">
     <div class="container">
         <div class="row text_sm_center">
             <div class="col-lg-7 col-md-7">
                 <div class="title_light">
-                    <h2>Download Whitepaper</h2>
-                    <p>A white paper is an authoritative report or guide that informs readers concisely about a complex issue and presents the issuing body's philosophy on the matter. It is meant to help readers understand an issue, solve a problem, or make a decision.</p>
-                    <p>Marketers create whitepapers to educate their audience about a particular issue, or explain and promote a particular methodology.</p>
+                    <h2>{t('whhead')}</h2>
+                    <p>{t('desc1')}</p>
+                    <p>{t('desc2')}</p>
                 </div>
-                <a href={Blockwhitepaper} download={"OFA_Blockchain_Whitepaper.pdf"} class="btn btn-default"><span class="ion-android-download"></span>Download Now <i class="ion-ios-arrow-thin-right"></i></a> </div>
+                <a href={Blockwhitepaper} download={"OFA_Blockchain_Whitepaper.pdf"} class="btn btn-default"><span class="ion-android-download"></span>{t('downloadbutton')} <i class="ion-ios-arrow-thin-right"></i></a> </div>
             <div class="col-lg-4 offset-lg-1 col-md-5">
                 <div class="res_md_mt_30">
                     <img alt="whitepaper" src="assets/images/whitepaper.png"/>
@@ -24,8 +27,8 @@ const Whitepaper = () => {
             <div class="row text-center">
                 <div class="col-md-12">
                     <div class="title_light">
-                        <span>Contact Us</span>
-                        <h2>Get in touch!</h2>
+                        <span>{t('contacthead')} </span>
+                        <h2>{t('contactdesc')}</h2>
                     </div>
                 </div>
             </div>
@@ -35,19 +38,19 @@ const Whitepaper = () => {
                     <form method="post" name="enq" class="form_field">
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <input type="text" required="required" placeholder="Enter Name *" id="first-name" class="form-control" name="name"/>
+                                <input type="text" required="required" placeholder={t('inputlabel1')} id="first-name" class="form-control" name="name"/>
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="email" required="required" placeholder="Enter Email *" id="email" class="form-control" name="email"/>
+                                <input type="email" required="required" placeholder={t('inputlabel2')} id="email" class="form-control" name="email"/>
                             </div>
                             <div class="form-group col-md-12">
-                                <input type="text" required="required" placeholder="Enter Subject" id="subject" class="form-control" name="subject"/>
+                                <input type="text" required="required" placeholder={t('inputlabel3')} id="subject" class="form-control" name="subject"/>
                             </div>
                             <div class="form-group col-md-12">
-                                <textarea required="required" placeholder="Message *" id="description" class="form-control" name="message" rows="2"></textarea>
+                                <textarea required="required" placeholder={t('inputlabel4')} id="description" class="form-control" name="message" rows="2"></textarea>
                             </div>
                             <div class="col-md-12 text-center">
-                                <button type="submit" title="Submit Your Message!" class="btn btn-default" id="submitButton" name="submit" value="Submit">Submit <i class="ion-ios-arrow-thin-right"></i></button>
+                                <button type="submit" title="Submit Your Message!" class="btn btn-default" id="submitButton" name="submit" value="Submit"> {t('subbutton')} <i class="ion-ios-arrow-thin-right"></i></button>
                             </div>
                             <div class="col-md-12">
                                 <div id="alert-msg" class="alert-msg text-center"></div>
@@ -60,27 +63,23 @@ const Whitepaper = () => {
                         <li class="input-group-prepend align-items-center">
                             <i class="ion-ios-location"></i>
                             <div class="contact_detail">
-                                <span>Address</span>
-                                <p>Phillipines Office ,
-                                    Brgy 26 purok 1 Gingoog City
-                                    <br/>
-                                    Grahian lipunan
-                                    Misamis Oriental
+                                <span>{t('addhead')}</span>
+                                <p>{t('address')}
                                 </p>
                             </div>
                         </li>
                         <li class="input-group-prepend align-items-center">
                             <i class="ion-android-call"></i>
                             <div class="contact_detail">
-                                <span>Phone</span>
-                                <p>+19294908904</p>
+                                <span>{t('phonehead')}</span>
+                                <p>{t('phone')}</p>
                             </div>
                         </li>
                         <li class="input-group-prepend align-items-center">
                             <i class="ion-ios-email"></i>
                             <div class="contact_detail">
-                                <span>Email</span>
-                                <p>Yourmail@gmail.com</p>
+                                <span>{t('emailhead')}</span>
+                                <p>{t('email')}</p>
                             </div>
                         </li>
                     </ul>

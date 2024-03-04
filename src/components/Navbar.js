@@ -18,6 +18,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Profile from "./Profile";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/authreducer/action";
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "./i18n";
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -46,6 +48,13 @@ const Navbar = () => {
     }
 
     setDrawerOpen(open);
+  };
+
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLanguage = i18n.language === "en" ? "es" : "en";
+    changeLanguage(newLanguage);
   };
 
   const menuItems = [
@@ -101,6 +110,11 @@ const Navbar = () => {
 
               <a href="#faq">Faq</a>
               <a href="#contact">Contact</a>
+              <button onClick={toggleLanguage}>
+                {i18n.language === "en"
+                  ? "Switch to Spanish"
+                  : "Switch to English"}
+              </button>
 
               {auth ? (
                 <>

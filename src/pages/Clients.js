@@ -1,14 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Clients = () => {
+  const { t } = useTranslation();
   return (
     <section class="bg_blue_dark client_logo">
       <div class="container">
         <div class="row text-center">
           <div class="col-md-12">
             <div class="title_light">
-              <span>Partners</span>
-              <h2>Our Clients</h2>
+              <span>{t('clienthead')}</span>
+              <h2>{t('clientdesc')}</h2>
             </div>
           </div>
         </div>

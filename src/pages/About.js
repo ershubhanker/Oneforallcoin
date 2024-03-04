@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 
 const style = {
   position: "absolute",
@@ -41,6 +42,7 @@ const style = {
 };
 
 const About = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -60,16 +62,10 @@ const About = () => {
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="title_light">
-              <span>What is OneForAllCoin basically about?</span>
-              <h2>About The Oneforall</h2>
+              <span>{t('aques')}</span>
+              <h2>{t('def')}</h2>
               <p>
-                OneForAllCoin was designed to help everyone involved earn money
-                because of the mechanisms in place to constantly push the token
-                to grow from internal and external components. Internally, we
-                offer a 2% referral reward for anyone you share your personal
-                link with anytime money enters their account. This is paid in
-                tokens and will be kept for 90 days with the anticipation that
-                it will make you even more money.
+                {t('shortdef')}
               </p>
             </div>
             {/* <a
@@ -80,7 +76,7 @@ const About = () => {
               <i class="ion-ios-arrow-thin-right"></i>
             </a> */}
 
-            <button onClick={handleOpen}>Know more</button>
+            <button onClick={handleOpen}>{t('knowbutton')}</button>
             <Modal
               open={open}
               onClose={handleClose}
@@ -107,49 +103,7 @@ const About = () => {
                   style={{ color: "white", fontFamily: "revert-layer" }}
                   id="parent-modal-description"
                 >
-                  OneForAllCoin was designed to help everyone involved earn
-                  money because of the mechanisms in place to constantly push
-                  the token to grow from internal and external components.
-                  Internally, we offer a 2% referral reward for anyone you share
-                  your personal link with anytime money enters their account.
-                  This is paid in tokens and will be kept for 90 days with the
-                  anticipation that it will make you even more money. 10% of the
-                  token will be burned when a person withdraws their money. Why
-                  do we do this? It means that money can never be touched adding
-                  value to our token and more desirable for investors.
-                  Eventually, it will be about supply and demand and people will
-                  want to be a part of what we have to offer if it will be
-                  available for them. Another mechanism internally that helps
-                  all of us and really shows that it is One For All is when
-                  someone withdraws their money, 10% is withheld in their
-                  account and cannot be touched for 90 days. This prevents
-                  whales from coming in and trying to pillage our program that
-                  is designed for longevity and to help EVERYONE. OneForAll is
-                  also aligned with a Live Stream Program called BuckChats that
-                  is not typical of other Social Sites because it offers a real
-                  opportunity for anyone to make a lot of money just by
-                  referring others. The beautiful part of how it helps
-                  OneForAllCoin is that 20% of their earnings goes DIRECTLY into
-                  OneForAll and is held for 90 days with the anticipation of
-                  that also making MORE money for the member and bringing
-                  greater value to our token. There will be a third program
-                  involved in the near future that will have the same concept
-                  and we will be bringing in other similar programs that like
-                  our vision.
-                  <br />
-                  <br />
-                  OneForAll will also be recruiting heavily in the Phillipines
-                  and we already have a strong group and small office set up to
-                  help the people in that Crypto friendly Country. BuckMeLLC
-                  will also be creating an account that will give tokens away to
-                  it's members for working hard and also part of a philanthropic
-                  program we will be working to encourage more growth and
-                  strength for our token. When you join OneForAll or BuckChats,
-                  you will automatically be signed up for both programs so your
-                  referrals will follow you. It doesn't matter if you don't want
-                  to participate in BuckChats. You can still earn from it if
-                  your referrals get involved. You will have the same User Name
-                  and password in both programs.
+                 {t('longdef')}
                 </p>
               </Box>
             </Modal>

@@ -87,14 +87,14 @@ const Login = () => {
     <Loading />
   ) : (
     <section
-      style={{ marginTop: "50px", backgroundColor: "#0f3e97" }}
+      style={{ marginTop: "50px", backgroundImage: `url('assets/images/login_backone.jpg')` , backgroundSize:"cover" }}
       class="pt-0"
     >
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div
-              style={{ backgroundColor: "#0f3e97", marginTop: "150px" }}
+              style={{ backgroundColor: "#2E2E2E", marginTop: "150px" }}
               class="authorize_box"
             >
               <div class="title_light text-center">

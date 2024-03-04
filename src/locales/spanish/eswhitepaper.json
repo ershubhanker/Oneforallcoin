@@ -1,0 +1,19 @@
+{
+    "whhead" : "Descargar documento técnico",
+    "desc1" : "Un documento técnico es un informe o guía autorizado que informa a los lectores de manera concisa sobre un tema complejo y presenta la filosofía del organismo emisor al respecto. Su objetivo es ayudar a los lectores a comprender un tema, resolver un problema o tomar una decisión.",
+    "desc2" : "Los especialistas en marketing crean documentos técnicos para educar a su audiencia sobre un tema en particular o explicar y promover una metodología particular.",
+    "downloadbutton" : "Descargar ahora",
+    "contacthead" : "CONTÁCTENOS",
+    "contactdesc" : "¡Ponerse en contacto!",
+    "inputlabel1" : "Ingrese su nombre *",
+    "inputlabel2" : "Ingrese correo electrónico *",
+    "inputlabel3" : "Ingresar Asunto *",
+    "inputlabel4" : "Mensaje *",
+    "addhead" : "DIRECCIÓN",
+    "address" : "Oficina de Filipinas, Brgy 26 purok 1 Gingoog City Grahian lipunan Misamis Oriental",
+    "phonehead" : "TELÉFONO",
+    "phoneno" : "+19294908904",
+    "emailhead" : "CORREO ELECTRÓNICO",
+    "email" : "youremail@gmail.com",
+    "subbutton" : "entregar"
+}

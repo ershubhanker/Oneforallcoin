@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Faq = () => {
+  const { t } = useTranslation();
   return (
     <section
       id="team"
@@ -317,12 +319,10 @@ const Faq = () => {
           <div class="row text-center">
             <div class="col-lg-8 col-md-12 offset-lg-2">
               <div class="title_dark">
-                <span>FAQs</span>
-                <h2>Frequently Asked Questions</h2>
+                <span>{t('head')}</span>
+                <h2>{t('faq')}</h2>
                 <p>
-                  Frequently asked questions (FAQ) or Questions and Answers
-                  (Q&A), are listed questions and answers, all supposed to be
-                  commonly asked in some context
+                {t('fhead')}
                 </p>
               </div>
             </div>
@@ -341,7 +341,7 @@ const Faq = () => {
                         aria-expanded="true"
                         aria-controls="collapseOne"
                       >
-                        What is cryptocurrency?
+                        {t('q1')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -353,11 +353,7 @@ const Faq = () => {
                   >
                     <div class="card-body gradient_box">
                       {" "}
-                      Cryptocurrency is a digital or virtual form of currency
-                      that uses cryptography for security and operates
-                      independently of a central bank. It uses decentralized
-                      control, making it immune to manipulation or interference
-                      by a single authority.
+                      {t('a1')}
                     </div>
                   </div>
                 </div>
@@ -372,7 +368,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        How do I buy cryptocurrency?
+                         {t('q2')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -384,12 +380,7 @@ const Faq = () => {
                   >
                     <div class="card-body gradient_box">
                       {" "}
-                      You can buy cryptocurrency through cryptocurrency
-                      exchanges, which are online platforms that facilitate the
-                      buying, selling, and trading of cryptocurrencies. You can
-                      usually purchase cryptocurrencies using fiat currency or
-                      other digital assets. We are using MetaMask. You will need
-                      to create an account.
+                      {t('a2')}
                     </div>
                   </div>
                 </div>
@@ -404,7 +395,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        How do I store my cryptocurrency?
+                        {t('q3')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -416,10 +407,7 @@ const Faq = () => {
                   >
                     <div class="card-body gradient_box">
                       {" "}
-                      Cryptocurrencies are stored in digital wallets, which can
-                      be software-based (hot wallets) or hardware devices (cold
-                      wallets). Hot wallets are connected to the internet, while
-                      cold wallets are offline for enhanced security.
+                      {t('a3')}
                     </div>
                   </div>
                 </div>
@@ -434,7 +422,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        What is blockchain?
+                         {t('q4')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -446,11 +434,7 @@ const Faq = () => {
                   >
                     <div class="card-body gradient_box">
                       {" "}
-                      Blockchain is the underlying technology behind
-                      cryptocurrencies. It is a distributed ledger that records
-                      all transactions across a network of computers. Each block
-                      in the chain contains a list of transactions, and once
-                      added, it cannot be altered.
+                      {t('a4')}
                     </div>
                   </div>
                 </div>
@@ -466,7 +450,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseFive"
                       >
-                        Are cryptocurrencies safe to invest in?
+                         {t('q5')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -477,11 +461,7 @@ const Faq = () => {
                     data-parent="#accordion"
                   >
                     <div class="card-body gradient_box">
-                      Cryptocurrencies, like any investment, come with risks.
-                      Their value can be volatile, and they are also susceptible
-                      to hacking and fraud. It's essential to conduct thorough
-                      research and understand the risks before investing in
-                      cryptocurrencies.
+                    {t('a5')}
                     </div>
                   </div>
                 </div>
@@ -497,7 +477,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseSix"
                       >
-                        What is the difference between Bitcoin and altcoins?
+                         {t('q6')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -508,11 +488,7 @@ const Faq = () => {
                     data-parent="#accordion"
                   >
                     <div class="card-body gradient_box">
-                      Bitcoin is the first and most well-known cryptocurrency,
-                      often referred to as digital gold. Altcoins, or
-                      alternative coins, refer to any cryptocurrency other than
-                      Bitcoin. Examples of altcoins include Ethereum, Ripple,
-                      Litecoin, and many others.
+                    {t('a6')}
                     </div>
                   </div>
                 </div>
@@ -528,7 +504,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseSeven"
                       >
-                        How can I research and analyze cryptocurrencies?
+                         {t('q7')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -539,11 +515,7 @@ const Faq = () => {
                     data-parent="#accordion"
                   >
                     <div class="card-body gradient_box">
-                      Various websites and platforms provide cryptocurrency
-                      market data, analysis, and news. You can use these
-                      resources to study historical price charts, trading
-                      volumes, market capitalization, and other relevant
-                      information.
+                    {t('a7')}
                     </div>
                   </div>
                 </div>
@@ -559,7 +531,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseEight"
                       >
-                        Can I use cryptocurrencies for online purchases?
+                         {t('q8')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -570,11 +542,7 @@ const Faq = () => {
                     data-parent="#accordion"
                   >
                     <div class="card-body gradient_box">
-                      Many online retailers and businesses accept
-                      cryptocurrencies as a form of payment. Additionally, some
-                      platforms offer crypto debit cards that allow users to
-                      spend their cryptocurrency holdings at traditional
-                      merchants.
+                    {t('a8')}
                     </div>
                   </div>
                 </div>
@@ -590,7 +558,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseNine"
                       >
-                        What are the tax implications of owning cryptocurrency?
+                        {t('q9')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -601,11 +569,7 @@ const Faq = () => {
                     data-parent="#accordion"
                   >
                     <div class="card-body gradient_box">
-                      Cryptocurrency tax regulations vary by country. In many
-                      jurisdictions, buying, selling, and trading
-                      cryptocurrencies may have tax implications. It's important
-                      to consult with a tax professional to understand the tax
-                      obligations related to cryptocurrency transactions.
+                    {t('a9')}
                     </div>
                   </div>
                 </div>
@@ -621,8 +585,7 @@ const Faq = () => {
                         aria-expanded="false"
                         aria-controls="collapseTen"
                       >
-                        How can I stay updated on cryptocurrency news and
-                        developments?
+                      {t('q10')}
                       </a>{" "}
                     </h6>
                   </div>
@@ -633,11 +596,7 @@ const Faq = () => {
                     data-parent="#accordion"
                   >
                     <div class="card-body gradient_box">
-                      You can stay informed by following reputable
-                      cryptocurrency news websites, subscribing to industry
-                      newsletters, joining cryptocurrency communities on social
-                      media platforms, and following influential figures in the
-                      cryptocurrency space.
+                    {t('a10')}
                     </div>
                   </div>
                 </div>

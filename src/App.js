@@ -9,6 +9,8 @@ import { restoreAuth } from "./redux/authreducer/action";
 import { useEffect } from "react";
 import AuthCheckComponent from "./components/AuthCheckComponent";
 import Navbar from "./components/Navbar";
+import { I18nextProvider } from "react-i18next";
+import { i18n } from "./components/i18n";
 
 function App() {
   // const dispatch = useDispatch();
@@ -25,11 +27,14 @@ function App() {
 
   return (
     <div className="App">
+      <I18nextProvider i18n={i18n}>
       <Navbar/>
       {/* <Header /> */}
       <MainRoutes />
 
       <Footer />
+      </I18nextProvider>
+     
     </div>
   );
 }
